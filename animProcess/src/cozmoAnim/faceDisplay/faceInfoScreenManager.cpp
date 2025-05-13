@@ -364,7 +364,7 @@ void FaceInfoScreenManager::Init(Anim::AnimContext* context, Anim::AnimationStre
     return ScreenName::Rebooting;
   };
   ADD_MENU_ITEM_WITH_ACTION(Recovery, "EXIT", rebootAction);
-  ADD_MENU_ITEM(Recovery, "Continue", None);
+  ADD_MENU_ITEM(Recovery, "CONTINUE", None);
   DISABLE_TIMEOUT(Recovery);
 
     
@@ -428,7 +428,7 @@ void FaceInfoScreenManager::Init(Anim::AnimContext* context, Anim::AnimationStre
   // === Camera Motor Test ===
   // Add menu item to camera screen to start a test mode where the motors run back and forth
   // and camera images are streamed to the face
-  ADD_MENU_ITEM(Camera, "Test Mode", CameraMotorTest);
+  ADD_MENU_ITEM(Camera, "MOTOR TEST MODE", CameraMotorTest);
   SET_TIMEOUT(CameraMotorTest, 300.f, None);
 
   auto cameraMotorTestExitAction = [cameraExitAction]() {
