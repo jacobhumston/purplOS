@@ -384,7 +384,7 @@ def handle_system(target_slot, manifest, tar_stream):
         "Update progress while writing to slots"
         write_status(PROGRESS_FILE, written_size + progress)
         if DEBUG:
-            sys.stdout.write("{0:0.3f}\r".format(float(written_size+progress)/float(total_size)))
+            sys.stdout.write("%{0:0.3f}\r".format(100 * float(written_size + progress) / float(total_size)))
             sys.stdout.flush()
 
     # Extract system images
